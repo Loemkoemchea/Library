@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Battambang", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+body{
+    background-color: rgb(26, 222, 189);
+}
+.logo h1{
+    font-size: 37.5px;
+    font-weight: bold;
+}
+.main-panel{
+  height: 100%;
+  margin-bottom: 50px;
+}
+.btn {
+  margin: 75px 0 0 30px;
+}
+.btn a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  color: rgb(86, 86, 86);
+}
+.btn h1{
+    text-align: center;
+    font-size: 35px;
+    padding-bottom: 20px;
+}
+.data {
+  display: flex;
+  justify-content: center;
+}
+.data table {
+  border-collapse: collapse;
+}
+.data td {
+  border: 1px solid black;
+  width: 180px;
+  text-align: center;
+}
+.data #book {
+  width: 320px;
+}
+#dataUser{
+  margin: 20px 20px 20px 45px;
+}
+#dataUser input{
+    background-color: transparent;
+    border: 2px solid teal;
+    outline: none;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+}
+#dataUser input[type="month"]{
+    cursor: pointer;
+    background-color: transparent;
+}
+#dataUser #filterButton{
+    border: none;
+    outline: none;
+    background-color: rgb(231, 151, 40);
+    padding: 0px 20px;
+    font-size: 17px;
+    cursor: pointer;
+    border-radius: 3px;
+}

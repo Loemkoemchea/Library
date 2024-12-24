@@ -1,0 +1,316 @@
+@import url("https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Battambang", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.logo h1{
+    font-weight: bold;
+    font-size: 37.5px;
+}
+.btn_back{
+  margin-top: 60px;
+}
+.btn_back {
+  padding: 20px 0 0 20px;
+  font-size: 15px;
+}
+.btn_back a {
+  text-decoration: none;
+  color: rgb(86, 86, 86);
+}
+.btn_back a i {
+  padding-right: 5px;
+}
+.btn_back,.overView{
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.overView {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px 0 100px;
+}
+.book-image img {
+  height: 270px;
+  width: 200px;
+  object-fit: cover;
+  border: 5px solid rgb(202, 202, 202);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.441);
+  margin-bottom: 10px;
+}
+.book-image .btn-desc a {
+  text-decoration: none;
+  color: rgb(59, 59, 59);
+  font-size: 22px;
+}
+.book-image .btn-desc {
+  display: flex;
+  gap: 55px;
+  padding: 0 0 0 20px;
+}
+.book-image .desc {
+  display: flex;
+  gap: 30px;
+  padding: 0 0 0 20px;
+}
+.book-image .desc a:nth-child(1) {
+  position: relative;
+  left: -10px;
+}
+.book-image .desc a {
+  text-decoration: none;
+  color: rgb(59, 59, 59);
+  position: relative;
+  top: -5px;
+}
+.userReading {
+  position: relative;
+}
+.star {
+  color: rgb(225, 191, 0);
+}
+.info {
+  display: flex;
+  gap: 20px;
+}
+.btnReadFav{
+  padding: 30px 0;
+}
+.btnReadFav button{
+  font-size: 17px;
+  border: none;
+  outline: none;
+  padding: 10px 14px;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  color: white;
+}
+.readBtn{
+  margin-top: 15px;
+  border: none;
+  outline: none;
+  padding: 7px 15px;
+  font-size: 17px;
+  font-weight: 500;
+  background-color: rgb(236, 161, 22);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.readBtn:hover{
+  background-color: rgb(217, 150, 26);
+}
+.addFav{
+  background-color: rgb(15, 177, 189);
+}
+.addFav:hover{
+  background-color: rgb(17, 160, 171);
+}
+.autBackground{
+  width: 400px;
+  height: 300px;
+  overflow-y: scroll;
+  text-align: justify;
+}
+.autBackground::-webkit-scrollbar{
+  display: none;
+}
+.autBackground {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.autBackground p{
+  font-weight: 400;
+}
+.autBackground p span{
+  font-weight: 600;
+}
+.note{
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0 0 0;
+  
+}
+.recommend{
+  display: flex;
+  background-color: rgb(95, 232, 209);
+  margin: 0 20px 20px 20px;
+  border-radius: 10px;
+}
+.note p{
+  position: relative;
+  margin-left: 120px;
+}
+.note span{
+  position: relative;
+  left: -255px;
+  margin-left: 100px;
+}
+.note span:nth-child(2){
+  position: relative;
+  left: -271px;
+}
+.recommend{
+  display: flex;
+  justify-content: space-between;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+.recommend:hover{
+  background-color: rgb(66, 255, 223);
+
+}
+.recommend img{
+  height: 100px;
+  width: 70px;
+  object-fit: cover;
+  padding: 5px 0;;
+  margin-left: 120px;
+  border-radius: 7px;
+}
+.recommend a{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  text-decoration: none;
+  color: black;
+}
+.recommend .about{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 107px;  
+  margin-right: 43px;
+}
+.about i{
+  font-size: 25px;
+  color: rgba(132, 132, 132, 0.632);
+  transition: 0.1s ease-in-out;
+}
+.about i:hover{
+  color: red;
+}
+.about a{
+  text-decoration: none;
+  color: black;
+  padding: 3px 15px;
+  border: 2px solid red;
+  border-radius: 5px;
+  color: red;
+  font-weight: 500;
+  transition: 0.2s ease-in-out;
+}
+.about a:hover{
+  background-color: rgb(255, 0, 0);
+  color: white;
+}
+.addPage {
+  position: fixed;
+  z-index: 111111;
+  height: 570px;
+  width: 550px;
+  top: 40%;
+  right: 11.3%;
+  transform: translate(-40%, -40%);
+  background-color: rgb(192, 192, 192);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px black;
+  visibility: hidden;
+}
+.addPage.active{
+  visibility: visible;
+}
+.addPage div input {
+  display: flex;
+  flex-direction: column;
+  width: 400px; 
+  padding: 6px 15px; 
+  font-size: 16px; 
+  border: 2px solid #ccc; 
+  border-radius: 5px; 
+  outline: none; 
+}
+.addPage div input:focus {
+  border-color: #15b1bd; 
+  background-color: #f0f8ff; 
+}
+.addPage div input::placeholder {
+  color: #888; 
+  font-style: italic; 
+}
+.addPage div input[type="text"],
+.addPage div input[type="email"],
+.addPage div input[type="password"] {
+  margin-bottom: 15px; 
+  border: none;
+  outline: none;
+}
+.addPage div input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+.addPage div input[type="radio"]:hover {
+  transform: scale(1.1); 
+}
+.addPage .gender{
+  position: relative;
+  left: -95px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.addPage .inputGender{
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.addPage .saveBtn{
+  margin-top: 20px;
+  border: none;
+  outline: none;
+  background-color: rgb(19, 220, 19);
+  padding: 5px 40px;
+  font-size: 17px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.addPage .saveBtn:hover{
+  background-color: rgb(17, 197, 17);
+}
+.addPage .closeBtn{
+  font-size: 30px;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.addPage .closeBtn:hover{
+    transform: rotate(90deg);
+}
+.addPage .title{
+  position: relative;
+  top: -10px;
+  font-size: 35px;
+}
+.addPage .bookName{
+    max-width: 400px;
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+.linkDownload{
+    display: none;
+}

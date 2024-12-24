@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Battambang", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+body{
+    background-color: rgb(26, 222, 189);
+}
+.main-panel {
+  padding-bottom: 100px;
+  height: 100%;
+}
+.logo h1{
+    font-size: 37.5px;
+    font-weight: bold;
+}
+.btn_back {
+  padding: 20px 0 0 20px;
+  font-size: 15px;
+  margin-top: 60px;
+}
+.btn_back a {
+  text-decoration: none;
+  color: rgb(86, 86, 86);
+}
+.btn_back a i {
+  padding-right: 5px;
+}
+.btn_back,
+.overView {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.addBtn {
+  position: relative;
+}
+.addBtn h2 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+}
+.book {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.editBook {
+  width: 100%;
+  margin-top: 50px;
+  border-collapse: collapse;
+}
+.editBook th:nth-child(1) {
+  text-align: left;
+  width: 60px;
+}
+.editBook th:nth-child(2) {
+  text-align: center;
+  width: 300px;
+}
+.editBook th:nth-child(2) p {
+  width: 100%;
+}
+.editBook th:nth-child(3) {
+  text-align: left;
+  width: 250px;
+}
+.editBook th:nth-child(3) p {
+  width: 100%;
+}
+.editBook th:nth-child(4) {
+  text-align: left;
+  width: 120px;
+}
+.editBook img {
+  height: 70px;
+  width: 50px;
+  object-fit: cover;
+  margin-top: 7px;
+  margin-left: 10px;
+  border-radius: 7px;
+}
+.editBook .listBook {
+  background-color: rgb(95, 232, 209);
+  transition: 0.15s ease-in-out;
+  cursor: pointer;
+}
+.editBook .listBook:hover {
+  background-color: rgb(66, 255, 223);
+}
+.editBook td button {
+  border: none;
+  outline: none;
+  height: 35px;
+  width: 80px;
+  font-size: 17px;
+  font-weight: 500;
+  text-align: center;
+}
+.editBook td:nth-child(4) {
+  text-align: left;
+}
+.editBook td:nth-child(5) {
+  text-align: center;
+}
+.editBook td:nth-child(5),
+.editBook td:nth-child(6) {
+  width: 100px;
+}
+.editBook td:nth-child(6) {
+  padding-right: 100px;
+}
+.editBook td:nth-child(5) button {
+  background-color: goldenrod;
+  transition: 0.2s ease-in-out;
+  border-radius: 7px;
+  cursor: pointer;
+  position: relative;
+  right: -50px;
+}
+.editBook td:nth-child(5) button a{
+  text-decoration: none;
+  padding: 10px;
+  color: black;
+}
+.editBook td:nth-child(5) button:hover {
+  background-color: rgb(240, 187, 53);
+  color: white;
+}
+.editBook td:nth-child(6) button {
+  background-color: rgb(224, 24, 24);
+  transition: 0.2s ease-in-out;
+  border-radius: 7px;
+  cursor: pointer;
+  position: relative;
+  right: -50px;
+}
+.editBook td:nth-child(6) button a{
+  text-decoration: none;
+  padding: 25px;
+  color: black;
+}
+.editBook td:nth-child(6) button:hover {
+  background-color: red;
+  color: white;
+}
+@media screen and (min-width: 1550px) {
+  .editBook {
+    width: 110%;
+  }
+}
+@media screen and (min-width: 1800px) {
+  .editBook {
+    width: 125%;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .table-container {
+    padding: 10px;
+  }
+
+  .editBook {
+    width: 100%;
+  }
+}
+.addBtn .addBook {
+  position: absolute;
+  display: inline;
+  z-index: 11;
+  right: 65px;
+  border: none;
+  outline: none;
+  padding: 7px 10px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 6px;
+  background-color: rgb(69, 210, 56);
+  color: rgb(253, 253, 253);
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+.addBtn .addBook:hover {
+  color: black;
+}
+.addPage {
+  position: fixed;
+  z-index: 11111;
+  height: 580px;
+  width: 520px;
+  top: 50%;
+  right: 11.3%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(30, 195, 167);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px black;
+  visibility: hidden;
+}
+.addPage div {
+  display: flex;
+  flex-direction: column;
+}
+.addPage div input {
+  width: 400px;
+  padding: 7px;
+  font-size: 15px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+.addPage .saveBtn {
+  width: 100px;
+  height: 40px;
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+  background-color: rgb(46, 216, 24);
+  font-size: 17px;
+  cursor: pointer;
+  border-radius: 7px;
+}
+.addPage .saveBtn:hover {
+  background-color: rgb(42, 197, 21);
+  color: white;
+  transition: 0.2s ease-in-out;
+}
+.closeBtn{
+  position: absolute;
+  font-size: 30px;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+.closeBtn:hover {
+    transform: rotate(90deg);
+}
+.addPage .inputFile{
+    background-color: rgb(255, 255, 255);
+    height: 30px;
+    width: 400px;
+    text-align: center;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+::-webkit-file-upload-button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-right: 2px solid black;
+    cursor: pointer;
+}
+.addPage .inputImage{
+    margin-bottom: 10px;
+}
+.addPage.active {
+  visibility: visible;
+  opacity: 1;
+  transition: 0.2s ease;
+}

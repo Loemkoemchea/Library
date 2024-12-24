@@ -1,0 +1,351 @@
+@import url("https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&display=swap");
+:root {
+  --black-5: rgba(0, 0, 0, 0.151);
+  --black-10: rgb(8, 32, 50);
+  --black-15: rgb(88, 85, 85);
+  --gray-5: rgb(207, 207, 207);
+  --gray-10: rgb(228, 228, 228);
+  --teal-5: rgb(30, 195, 167);
+  --teal-10: rgb(26, 222, 189);
+  --teal-15: rgb(53, 236, 205);
+  --orange-5: rgb(231, 151, 40);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* container */
+.container {
+  display: flex;
+  font-family: "Battambang", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.right-panel {
+  min-height: 100vh;
+  width: 200px;
+  background-color: var(--gray-5);
+  padding-left: 25px;
+  padding-top: 40px;
+  padding-right: 5px;
+  z-index: 1111;
+  position: fixed;
+}
+.logo {
+  font-size: 25px;
+}
+.logo > h1:nth-child(2) {
+  color: var(--teal-5);
+}
+.menubar {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: 30px;
+}
+.menu-link {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 5px 35px 5px 12px;
+  text-decoration: none;
+  color: var(--black-15);
+  border-radius: 6px;
+  transition: 0.1s ease-in-out;
+}
+.menu-link:hover {
+  background-color: var(--gray-10);
+}
+/* main */
+.main-panel {
+  width:100vw;
+  position: relative;
+  background-color: var(--teal-10);
+  padding-left: 200px;
+}
+.navbar {
+  display: flex;
+  padding: 10px 40px 0 40px;
+  height: 60px;
+  background-color: var(--teal-15);
+  width: 100%;
+  box-shadow: 0 1px 10px var(--black-10);
+  position: fixed;
+  left: 200px;
+  z-index: 111;
+}
+.nav-list {
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin-right: 200px;
+}
+.nav-link {
+  background-color: var(--gray-10);
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  gap: 10px;
+  border-radius: 20px;
+  font-size: 17px;
+}
+.nav-link span:nth-child(2) {
+  padding: 0 8px 0 8px;
+}
+.nav-link input {
+  padding: 8px 12px;
+  border: none;
+  outline: none;
+  margin: 0 8px 0 0;
+  width: 300px;
+  background-color: transparent;
+  font-size: 15px;
+}
+.nav-link input::placeholder {
+  font-family: "Battambang", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.searchResult {
+  visibility: hidden;
+  display: flex;
+  flex-direction: column; 
+  max-height: 200px; 
+  overflow-y: scroll; 
+  position: absolute;
+  top: 55px;
+  left: 45px;
+  z-index: 11111;
+  background-color: rgba(45, 45, 45, 0.813);
+  width: 360px;
+}
+.searchResult::-webkit-scrollbar{
+  display: none;
+}
+.searchResult a{
+text-decoration: none;
+color: black;
+}
+.searchResult h3,
+#noResult{
+padding: 5px 10px;
+color: whitesmoke;
+font-size: 15px;
+border-bottom: 2px solid rgb(149, 149, 149);
+}
+.searchResult h3:hover,
+#noResult:hover{
+background-color: rgba(220, 220, 220, 0.406);
+}
+.nav-link img {
+  height: 30px;
+  width: 30px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.nav-list .nav-link:nth-child(3) {
+  display: flex;
+  min-width: 420px;
+  justify-content: space-between;
+}
+.nav-link > .time-container,
+.nav-link > .date-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.nav-list .nav-link:nth-child(4) {
+  display: flex;
+  gap: 10px;
+  min-width: 100px;
+  padding: 0 5px;
+}
+.nav-link > .account {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 10px 0 0;
+}
+/* wrapper text */
+.wrapper {
+  display: flex;
+  font-size: 25px;
+  padding: 15px 0 0 17px;
+  margin-top: 60px;
+}
+.wrapper .static-txt {
+  color: var(--gray-10);
+}
+.wrapper .dynamic-txt {
+  margin-left: 10px;
+  height: 40px;
+  overflow: hidden;
+}
+.dynamic-txt li {
+  list-style: none;
+  color: var(--orange-5);
+  font-weight: 600;
+  position: relative;
+  top: 0;
+  animation: slide 12s steps(4) infinite;
+}
+@keyframes slide {
+  100% {
+    top: -178px;
+  }
+}
+.dynamic-txt li::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  border-left: 2px solid var(--orange-5);
+  position: absolute;
+  animation: typing 3s steps(10) infinite;
+  background-color: var(--teal-10);
+}
+@keyframes typing {
+  40%,
+  60% {
+    left: calc(100% + 5px);
+  }
+  100% {
+    left: 0;
+  }
+}
+/* Book */
+.book {
+  padding: 2px 0 0 17px;
+  max-width: 1280px;
+  position: relative;
+}
+.book i {
+  height: 40px;
+  width: 40px;
+  background-color: white;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.book i:nth-child(2) {
+  left: 27px;
+}
+.book i:last-child {
+  right: 20px;
+}
+.book-list {
+  display: flex;
+  gap: 10px;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+.book-list.dragging {
+  scroll-behavior: auto;
+}
+.book-link {
+  list-style: none;
+}
+.book-list.dragging .book-link {
+  cursor: grab;
+  user-select: none;
+}
+.book-list p {
+  color: var(--black-15);
+}
+.book-list img {
+  min-height: 160px;
+  width: 150px;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.book-list h3 {
+  height: 60px;
+  width: 150px;
+  background-color: white;
+  padding: 0 5px 0 5px;
+  position: relative;
+  top: -9.6px;
+  overflow: hidden;
+  font-size: 15px;
+}
+.description {
+  background-color: white;
+  position: relative;
+  top: -10px;
+  padding: 0 0 0 5px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  width: 150px;
+}
+.description h4 {
+  font-size: 13px;
+} 
+.allBook{
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));  
+}
+.btnNextpage{
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.btnNextpage button{
+  border: none;
+  outline: none;
+  padding: 10px 7px;
+  background-color: rgb(227, 227, 66);
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 15px;
+}
+.btnNextpage button:hover{
+  background-color: rgb(243, 243, 79)
+}
+.footer{
+  font-size: 16px;
+}
+.list-icon {
+  display: flex;
+  gap: 2.2rem;
+  justify-content: center;
+  padding: 40px 0 20px 0;
+}
+li {
+  list-style: none;
+}
+.link-icon > a {
+  font-size: 25px;
+  color: black;
+  cursor: pointer;
+  transition: all 1s ease-in-out;
+}
+.link-icon :hover {
+  color: rgb(255, 233, 70);
+  transform: scale(1.2);
+  text-shadow: 0 0 10px rgb(231, 151, 40);
+}
+.creator{
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  cursor: pointer;
+}
+.footer .credit,
+.footer .copyright{
+ display: flex;
+ justify-content: center;
+ margin: 10px 0;
+ transition: 0.2s ease-in-out;
+}
+.creator li:hover{
+  color: rgb(255, 233, 70);
+}

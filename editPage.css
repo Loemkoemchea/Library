@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Battambang", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.logo h1{
+    font-size: 37.5px;
+    font-weight: bold;
+}
+.main-panel {
+  height: 100vh;
+}
+.btn_back {
+  padding: 20px 0 0 20px;
+  font-size: 15px;
+  margin-top: 60px;
+}
+.btn_back a {
+  text-decoration: none;
+  color: rgb(86, 86, 86);
+}
+.btn_back a i {
+  padding-right: 5px;
+}
+.btn_back,
+.overView {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+h2 {
+  text-align: center;
+  font-size: 32px;
+}
+.addPage {
+  position: absolute;
+  z-index: 11;
+  height: 500px;
+  width: 500px;
+  top: 50%;
+  right: 10.5%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(30, 195, 167);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px black;
+}
+.addPage .pageTitle{
+  margin-bottom: 20px;
+}
+.addPage div {
+  display: flex;
+  flex-direction: column;
+}
+.addPage div input {
+  width: 400px;
+  padding: 7px;
+  font-size: 15px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+.addPage .saveBtn {
+  width: 100px;
+  height: 40px;
+  border: none;
+  outline: none;
+  /* padding: 5px 10px 10px 10px; */
+  background-color: rgb(46, 216, 24);
+  font-size: 17px;
+  cursor: pointer;
+  border-radius: 7px;
+  transition: 0.2s ease;
+  margin-top: 20px;
+}
+.addPage .saveBtn:hover {
+  background-color: rgb(42, 197, 21);
+  color: white;
+}
+.closeBtn {
+  position: absolute;
+  font-size: 30px;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.closeBtn:hover {
+  transform: rotate(90deg);
+}
+.addPage .inputFile {
+  background-color: rgb(255, 255, 255);
+  height: 30px;
+  width: 400px;
+  text-align: center;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+::-webkit-file-upload-button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-right: 2px solid black;
+  cursor: pointer;
+}
+.addPage .inputImage {
+  margin-bottom: 10px;
+}
+.sourceBook label,
+.sourceBook input[type="file"],
+#currentBookPdf,
+.sourceImage label,
+.sourceImage input[type="file"],
+#currentBookImage
+{
+    display: none;
+}

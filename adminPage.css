@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Battambang", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.main-panel {
+  height: 100vh;
+}
+.logo h1{
+    font-size: 37.5px;
+    font-weight: bold;
+}
+.btn_back {
+  padding: 20px 0 0 20px;
+  font-size: 17px;
+  margin-top: 60px;
+}
+.btn_back a {
+  text-decoration: none;
+  color: rgb(86, 86, 86);
+}
+.btn_back a i {
+  padding-right: 5px;
+}
+.btn_back,
+.overView {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  top: 30px;
+}
+.panel h1 {
+  font-size: 40px;
+}
+.panel h1 span{
+    animation: change 4s infinite;
+}
+@keyframes change{
+    0%{
+        color: rgb(231, 151, 40);
+    }
+    50%{
+        color: white;
+    }
+    100%{
+        color: rgb(231, 151, 40);
+    }
+}
+.panel .pageSitting {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 80px;
+  margin-top: 250px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-90%);
+  font-size: 17px;
+}
+.pageSitting a{
+  background-color: none;
+  border: 2px solid rgb(231, 151, 40);
+  padding: 40px 50px;
+  min-width: 200px;
+  text-align: center;
+  transition: color 0.4s linear;
+  text-decoration: none;
+  color: black;
+  position: relative;
+  animation: chBorder1 4s infinite;
+  z-index: 1111;
+  font-size: 25px;
+}
+.pageSitting a:nth-child(2){
+  animation: chBorder2 4s infinite;
+}
+@keyframes chBorder1{
+    0%{
+        color: rgb(231, 151, 40);
+        border-color: white;
+    }
+    50%{
+        color: white;
+        border-color: rgb(231, 151, 40);
+    }
+    100%{
+        color: rgb(231, 151, 40);
+        border-color: white;
+    }
+}
+@keyframes chBorder2{
+    0%{
+        border-color: rgb(231, 151, 40);
+        color: white;
+    }
+    50%{
+        border-color: white;
+        color: rgb(231, 151, 40);
+    }
+    100%{
+        border-color: rgb(231, 151, 40);
+        color: white;
+    }
+}
+.pageSitting a:hover{
+  color: white;
+  border-color: transparent;
+}
+.pageSitting a::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(231, 151, 40);
+  z-index: -1;
+  transition: transform 0.5s;
+  transform-origin: 0 0;
+  transition-timing-function: cubic-bezier(0.5,1.6,0.4,0.7);
+}
+.pageSitting a::before{
+  transform: scaleY(0);
+}
+.pageSitting a:hover::before{
+  transform: scaleY(1);
+}
+
+
+
+
